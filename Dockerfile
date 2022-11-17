@@ -18,6 +18,7 @@ RUN export PATH=/cmake-3.25.0-rc4-linux-x86_64/bin:$PATH
 RUN wget https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/gcc-9.1.0.tar.gz --no-check-certificate
 RUN tar xzf gcc-9.1.0.tar.gz
 RUN cd gcc-9.1.0
+RUN ls
 RUN contrib/download_prerequisites
 RUN cd ..
 RUN mkdir gcc-9.1.0-build
