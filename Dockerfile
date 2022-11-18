@@ -28,3 +28,5 @@ RUN python3 -m pip install conan
 RUN wget https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.3.0/graalvm-ce-java11-linux-amd64-22.3.0.tar.gz
 RUN tar xzf graalvm-ce-java11-linux-amd64-22.3.0.tar.gz
 RUN export PATH=/graalvm-ce-java11-22.3.0/bin:$PATH
+
+RUN gu install native-image
