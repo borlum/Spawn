@@ -13,7 +13,7 @@ RUN yum install python3 -y
 
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.25.0-rc4/cmake-3.25.0-rc4-linux-x86_64.tar.gz
 RUN tar xzf cmake-3.25.0-rc4-linux-x86_64.tar.gz
-RUN export PATH=/cmake-3.25.0-rc4-linux-x86_64/bin:$PATH
+ENV PATH="${PATH}:/cmake-3.25.0-rc4-linux-x86_64/bin"
 
 RUN wget https://ftp.gnu.org/gnu/gcc/gcc-9.1.0/gcc-9.1.0.tar.gz --no-check-certificate
 RUN tar xzf gcc-9.1.0.tar.gz
@@ -27,6 +27,6 @@ RUN python3 -m pip install conan
 
 RUN wget https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.3.0/graalvm-ce-java11-linux-amd64-22.3.0.tar.gz
 RUN tar xzf graalvm-ce-java11-linux-amd64-22.3.0.tar.gz
-RUN export PATH=/graalvm-ce-java11-22.3.0/bin:$PATH
+ENV PATH="${PATH}:/graalvm-ce-java11-22.3.0/bin"
 
 RUN gu install native-image
